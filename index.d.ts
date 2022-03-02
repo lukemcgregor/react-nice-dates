@@ -1,6 +1,6 @@
-declare module "react-nice-dates" {
-  import * as React from "react";
-  import * as Locale from "date-fns";
+declare module '@axel-dev/react-nice-dates' {
+  import * as React from 'react';
+  import * as Locale from 'date-fns';
 
   type DateChangeCallBack = (date: Date | null) => void;
 
@@ -96,7 +96,7 @@ declare module "react-nice-dates" {
   export function DateRangePickerCalendar(
     props: DateRangePickerCalendarProps
   ): JSX.Element;
-  
+
   export function useDateInput({
     date,
     format,
@@ -104,14 +104,14 @@ declare module "react-nice-dates" {
     minimumDate,
     maximumDate,
     onDateChange,
-    validate
+    validate,
   }: {
-    date?: Date,
-    format?: string,
-    locale: Locale,
-    minimumDate?: Date,
-    maximumDate?: Date,
-    onDateChange: (date: Date) => void,
-    validate?: (date: Date) => boolean,
-  }): any
+    date?: Date;
+    format?: string;
+    locale: Locale;
+    minimumDate?: Date;
+    maximumDate?: Date;
+    onDateChange: (date: Date) => void;
+    validate?: (date: Date) => boolean;
+  }): any;
 }
