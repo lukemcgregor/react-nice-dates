@@ -114,4 +114,7 @@ declare module '@axel-dev/react-nice-dates' {
     onDateChange: (date: Date) => void;
     validate?: (date: Date) => boolean;
   }): any;
+
+  export const START_DATE: string;
+  export const END_DATE: string;
 }
