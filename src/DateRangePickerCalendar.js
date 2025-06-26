@@ -13,13 +13,13 @@ export default function DateRangePickerCalendar({
   focus,
   month: receivedMonth,
   onStartDateChange,
-  onEndDateChange,
-  onFocusChange,
-  onMonthChange,
+  onEndDateChange = () => {},
+  onFocusChange = () => {},
+  onMonthChange = () => {},
   minimumDate,
   maximumDate,
-  minimumLength,
-  maximumLength,
+  minimumLength = 0,
+  maximumLength = null,
   modifiers: receivedModifiers,
   modifiersClassNames,
   weekdayFormat,
@@ -130,12 +130,4 @@ DateRangePickerCalendar.propTypes = {
   modifiersClassNames: objectOf(string),
   weekdayFormat: string,
   touchDragEnabled: bool
-}
-
-DateRangePickerCalendar.defaultProps = {
-  onStartDateChange: () => {},
-  onEndDateChange: () => {},
-  onFocusChange: () => {},
-  minimumLength: 0,
-  maximumLength: null
 }
